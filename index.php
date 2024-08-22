@@ -9,7 +9,9 @@ try {
   // $dbs->test();
   $src_db = $_REQUEST['src_db'] ?? '';
   $dst_db = $_REQUEST['dst_db'] ?? '';
-  $dbs->createSyncScript($src_db, $dst_db);
+  $syncScript = $dbs->createSyncScript($src_db, $dst_db);
+  echo '<pre>';
+  echo $syncScript;
 } catch (\Throwable $ex) {
   echo $ex->getMessage();
 }

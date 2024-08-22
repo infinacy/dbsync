@@ -545,9 +545,13 @@ class DbSync {
         array_unshift($scripts, 'SET FOREIGN_KEY_CHECKS=0;');
         array_push($scripts, 'SET FOREIGN_KEY_CHECKS=1;');
 
+        $final_script = '';
+
         foreach ($scripts as $script) {
-            echo $script;
-            echo "\n";
+            $final_script .= $script;
+            $final_script .= "\n";
         }
+
+        return $final_script;
     }
 }
