@@ -1,0 +1,23 @@
+{
+  "name": "infinacy/dbsync",
+  "description": "Creates syncronization sql script from a source mysql database to destination mysql database",
+  "type": "library",
+  "require": {
+    "illuminate/database": "^8.83",
+    "illuminate/events": "^8.83",
+    "illuminate/container": "^8.83",
+    "illuminate/collections": "^8.83"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Infinacy\\DbSync\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Nazmul Alam",
+      "email": "nazmul@infinacy.com"
+    }
+  ]
+}
